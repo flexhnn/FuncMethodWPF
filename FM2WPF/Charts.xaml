@@ -1,0 +1,484 @@
+﻿<Window x:Class="FM2WPF.Charts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FM2WPF"
+        mc:Ignorable="d"
+        Title="Полная вариация по Арцела" Height="950" Width="1500" WindowStartupLocation="CenterScreen">
+    <Grid x:Name="grid_main">
+
+        <TabControl x:Name="tabs">
+            <TabItem x:Name="ti_plains">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal" Width="100">
+                        <TextBlock Margin="3">Яркостные поля</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+
+                <TabItem.Content>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition Height="3"></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        
+                        <Grid Grid.Row="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"></RowDefinition>
+                                <RowDefinition Height="35"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition Height="3"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="Изображение 1" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+
+                            <TextBlock x:Name="z_frag_val" Grid.Row="1" Grid.Column="0" Text="Исходный фрагмент: " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></TextBlock>
+                            <TextBlock x:Name="h_frag_val" Grid.Row="1" Grid.Column="1" Text="Горизонтальная пара: " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></TextBlock>
+                            <TextBlock x:Name="v_frag_val" Grid.Row="1" Grid.Column="2" Text="Вертикальная пара: " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></TextBlock>
+                            <TextBlock x:Name="d_frag_val" Grid.Row="1" Grid.Column="3" Text="Диагональная пара: " HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></TextBlock>
+
+                            <Image x:Name="img_zs" Grid.Row="2" Grid.Column="0" Margin="5"></Image>
+                            <Image x:Name="img_hs" Grid.Row="2" Grid.Column="1" Margin="5"></Image>
+                            <Image x:Name="img_vs" Grid.Row="2" Grid.Column="2" Margin="5"></Image>
+                            <Image x:Name="img_ds" Grid.Row="2" Grid.Column="3" Margin="5"></Image>
+
+                            <GridSplitter Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Height="3" HorizontalAlignment="Stretch" VerticalAlignment="Center" ShowsPreview="False"></GridSplitter>
+
+                            <Image x:Name="img_zd" Grid.Row="4" Grid.Column="0" Margin="5"></Image>
+                            <Image x:Name="img_hd" Grid.Row="4" Grid.Column="1" Margin="5"></Image>
+                            <Image x:Name="img_vd" Grid.Row="4" Grid.Column="2" Margin="5"></Image>
+                            <Image x:Name="img_dd" Grid.Row="4" Grid.Column="3" Margin="5"></Image>
+                        </Grid>
+
+                        <GridSplitter Grid.Row="1" Height="3" HorizontalAlignment="Stretch" VerticalAlignment="Center" ShowsPreview="False"></GridSplitter>
+                        
+                        <Grid Grid.Row="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"></RowDefinition>
+                                <RowDefinition Height="35"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition Height="3"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="Изображение 2" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+
+                            <TextBlock x:Name="z_frag_val_2" Grid.Row="1" Grid.Column="0" Text="Исходный фрагмент" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></TextBlock>
+                            <TextBlock x:Name="h_frag_val_2" Grid.Row="1" Grid.Column="1" Text="Горизонтальная пара" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></TextBlock>
+                            <TextBlock x:Name="v_frag_val_2" Grid.Row="1" Grid.Column="2" Text="Вертикальная пара" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></TextBlock>
+                            <TextBlock x:Name="d_frag_val_2" Grid.Row="1" Grid.Column="3" Text="Диагональная пара" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></TextBlock>
+
+                            <Image x:Name="img_zs_2" Grid.Row="2" Grid.Column="0" Margin="5"></Image>
+                            <Image x:Name="img_hs_2" Grid.Row="2" Grid.Column="1" Margin="5"></Image>
+                            <Image x:Name="img_vs_2" Grid.Row="2" Grid.Column="2" Margin="5"></Image>
+                            <Image x:Name="img_ds_2" Grid.Row="2" Grid.Column="3" Margin="5"></Image>
+
+                            <GridSplitter Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Height="3" HorizontalAlignment="Stretch" VerticalAlignment="Center" ShowsPreview="False"></GridSplitter>
+
+                            <Image x:Name="img_zd_2" Grid.Row="4" Grid.Column="0" Margin="5"></Image>
+                            <Image x:Name="img_hd_2" Grid.Row="4" Grid.Column="1" Margin="5"></Image>
+                            <Image x:Name="img_vd_2" Grid.Row="4" Grid.Column="2" Margin="5"></Image>
+                            <Image x:Name="img_dd_2" Grid.Row="4" Grid.Column="3" Margin="5"></Image>
+                        </Grid>
+                    </Grid>
+
+                    
+                    <!--<Grid ShowGridLines="True">
+                        
+                    </Grid>-->
+                </TabItem.Content>
+            </TabItem>
+
+            <TabItem x:Name="ti_charts">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal" Width="70">
+                        <TextBlock Margin="3">Графики</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="3"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="25"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition Height="3"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition Height="3"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition Height="3"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="Изображение 1" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                            <CheckBox x:Name="cb_d_mode" Uid="cb1" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Яркостная диаграмма" IsChecked="True" Margin="10 0 0 0"></CheckBox>
+
+                            <TextBlock Text="Исходный фрагмент" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+                            <TextBlock Text="Горизонтальная пара" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+                            <TextBlock Text="Вертикальная пара" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+                            <TextBlock Text="Диагональная пара" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+
+                            <Image x:Name="img_chrt_z" Grid.Row="1" Grid.Column="0" Margin="3 20 3 3"></Image>
+                            <Image x:Name="img_chrt_h" Grid.Row="3" Grid.Column="0" Margin="3 20 3 3"></Image>
+                            <Image x:Name="img_chrt_v" Grid.Row="5" Grid.Column="0" Margin="3 20 3 3"></Image>
+                            <Image x:Name="img_chrt_d" Grid.Row="7" Grid.Column="0" Margin="3 20 3 3"></Image>
+
+
+                            <GridSplitter Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="3"></GridSplitter>
+                            <GridSplitter Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="3"></GridSplitter>
+                            <GridSplitter Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="3"></GridSplitter>
+
+                            <Viewport3D x:Name="vp_z1" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <Viewport3D.Camera>
+                                    <PerspectiveCamera Position="0,0.3,3.5" LookDirection="0,0,-3.5"></PerspectiveCamera>
+                                </Viewport3D.Camera>
+                                <ModelVisual3D>
+                                    <ModelVisual3D.Content>
+                                        <DirectionalLight Color="White" Direction="-1,-1,-2" />
+                                    </ModelVisual3D.Content>
+                                </ModelVisual3D>
+                                <ModelVisual3D x:Name="g_source_1">
+                                    <ModelVisual3D.Content>
+                                        <Model3DGroup x:Name="g_source_1_group">
+                                        </Model3DGroup>
+
+                                    </ModelVisual3D.Content>
+                                    <ModelVisual3D.Transform>
+                                        <Transform3DGroup x:Name="g_source_1_transform">
+                                            <TranslateTransform3D OffsetY="0.3"></TranslateTransform3D>
+                                            <RotateTransform3D>
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D x:Name="rotateY_z1" Axis="0 1 0" Angle="0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+
+                                            <RotateTransform3D>
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D x:Name="rotateX_z1" Axis="1 0 0" Angle="0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+                                            <ScaleTransform3D x:Name="scale_z1"></ScaleTransform3D>
+                                        </Transform3DGroup>
+                                    </ModelVisual3D.Transform>
+                                </ModelVisual3D>
+                            </Viewport3D>
+
+                            <Viewport3D x:Name="vp_h1" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <Viewport3D.Camera>
+                                    <PerspectiveCamera Position="0,0.3,3.5" LookDirection="0,0,-3.5"></PerspectiveCamera>
+                                </Viewport3D.Camera>
+                                <ModelVisual3D>
+                                    <ModelVisual3D.Content>
+                                        <DirectionalLight Color="White" Direction="-1,-1,-2" />
+                                    </ModelVisual3D.Content>
+                                </ModelVisual3D>
+                                <ModelVisual3D x:Name="g_horizontal_1">
+                                    <ModelVisual3D.Content>
+                                        <Model3DGroup x:Name="g_horizontal_1_group">
+                                        </Model3DGroup>
+
+                                    </ModelVisual3D.Content>
+                                    <ModelVisual3D.Transform>
+                                        <Transform3DGroup x:Name="g_horizontal_1_transform">
+                                            <TranslateTransform3D OffsetY="0.3"></TranslateTransform3D>
+                                            <RotateTransform3D>
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D x:Name="rotateY_h1" Axis="0 1 0" Angle="0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+
+                                            <RotateTransform3D>
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D x:Name="rotateX_h1" Axis="1 0 0" Angle="0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+                                            <ScaleTransform3D x:Name="scale_h1"></ScaleTransform3D>
+                                        </Transform3DGroup>
+                                    </ModelVisual3D.Transform>
+                                </ModelVisual3D>
+                            </Viewport3D>
+
+                            <Viewport3D x:Name="vp_v1" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <Viewport3D.Camera>
+                                    <PerspectiveCamera Position="0,0.3,3.5" LookDirection="0,0,-3.5"></PerspectiveCamera>
+                                </Viewport3D.Camera>
+                                <ModelVisual3D>
+                                    <ModelVisual3D.Content>
+                                        <DirectionalLight Color="White" Direction="-1,-1,-2" />
+                                    </ModelVisual3D.Content>
+                                </ModelVisual3D>
+                                <ModelVisual3D x:Name="g_vertical_1">
+                                    <ModelVisual3D.Content>
+                                        <Model3DGroup x:Name="g_vertical_1_group">
+                                        </Model3DGroup>
+
+                                    </ModelVisual3D.Content>
+                                    <ModelVisual3D.Transform>
+                                        <Transform3DGroup x:Name="g_vertical_1_transform">
+                                            <TranslateTransform3D OffsetY="0.3"></TranslateTransform3D>
+                                            <RotateTransform3D>
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D x:Name="rotateY_v1" Axis="0 1 0" Angle="0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+
+                                            <RotateTransform3D>
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D x:Name="rotateX_v1" Axis="1 0 0" Angle="0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+                                            <ScaleTransform3D x:Name="scale_v1"></ScaleTransform3D>
+                                        </Transform3DGroup>
+                                    </ModelVisual3D.Transform>
+                                </ModelVisual3D>
+                            </Viewport3D>
+
+                            <Viewport3D x:Name="vp_d1" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <Viewport3D.Camera>
+                                    <PerspectiveCamera Position="0,0.3,3.5" LookDirection="0,0,-3.5"></PerspectiveCamera>
+                                </Viewport3D.Camera>
+                                <ModelVisual3D>
+                                    <ModelVisual3D.Content>
+                                        <DirectionalLight Color="White" Direction="-1,-1,-2" />
+                                    </ModelVisual3D.Content>
+                                </ModelVisual3D>
+                                <ModelVisual3D x:Name="g_diagonal_1">
+                                    <ModelVisual3D.Content>
+                                        <Model3DGroup x:Name="g_diagonal_1_group">
+                                        </Model3DGroup>
+
+                                    </ModelVisual3D.Content>
+                                    <ModelVisual3D.Transform>
+                                        <Transform3DGroup x:Name="g_diagonal_1_transform">
+                                            <TranslateTransform3D OffsetY="0.3"></TranslateTransform3D>
+                                            <RotateTransform3D>
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D x:Name="rotateY_d1" Axis="0 1 0" Angle="0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+
+                                            <RotateTransform3D>
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D x:Name="rotateX_d1" Axis="1 0 0" Angle="0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+                                            <ScaleTransform3D x:Name="scale_d1"></ScaleTransform3D>
+                                        </Transform3DGroup>
+                                    </ModelVisual3D.Transform>
+                                </ModelVisual3D>
+                            </Viewport3D>
+                            
+                        </Grid>
+
+                        <GridSplitter Grid.Column="1" Width="4" VerticalAlignment="Stretch" HorizontalAlignment="Center" ShowsPreview="False"></GridSplitter>
+
+                        <Grid Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="25"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition Height="3"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition Height="3"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition Height="3"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="Изображение 2" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                            <CheckBox x:Name="cb_d_mode_2" Uid="cb2" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Яркостная диаграмма" IsChecked="True" Margin="10 0 0 0"></CheckBox>
+
+                            <TextBlock Text="Исходный фрагмент" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+                            <TextBlock Text="Горизонтальная пара" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+                            <TextBlock Text="Вертикальная пара" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+                            <TextBlock Text="Диагональная пара" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+
+                            <Image x:Name="img_chrt_z_s" Grid.Row="1" Grid.Column="0" Margin="3 20 3 3"></Image>
+                            <Image x:Name="img_chrt_h_s" Grid.Row="3" Grid.Column="0" Margin="3 20 3 3"></Image>
+                            <Image x:Name="img_chrt_v_s" Grid.Row="5" Grid.Column="0" Margin="3 20 3 3"></Image>
+                            <Image x:Name="img_chrt_d_s" Grid.Row="7" Grid.Column="0" Margin="3 20 3 3"></Image>
+
+
+                            <GridSplitter Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="3"></GridSplitter>
+                            <GridSplitter Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="3"></GridSplitter>
+                            <GridSplitter Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="3"></GridSplitter>
+
+                            <Viewport3D x:Name="vp_z2" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <Viewport3D.Camera>
+                                    <PerspectiveCamera Position="0,0.3,3.5" LookDirection="0,0,-3.5"></PerspectiveCamera>
+                                </Viewport3D.Camera>
+                                <ModelVisual3D>
+                                    <ModelVisual3D.Content>
+                                        <DirectionalLight Color="White" Direction="-1,-1,-2" />
+                                    </ModelVisual3D.Content>
+                                </ModelVisual3D>
+                                <ModelVisual3D x:Name="g_source_2">
+                                    <ModelVisual3D.Content>
+                                        <Model3DGroup x:Name="g_source_2_group">
+                                        </Model3DGroup>
+
+                                    </ModelVisual3D.Content>
+                                    <ModelVisual3D.Transform>
+                                        <Transform3DGroup x:Name="g_source_2_transform">
+                                            <TranslateTransform3D OffsetY="0.3"></TranslateTransform3D>
+                                            <RotateTransform3D>
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D x:Name="rotateY_z2" Axis="0 1 0" Angle="0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+
+                                            <RotateTransform3D>
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D x:Name="rotateX_z2" Axis="1 0 0" Angle="0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+                                            <ScaleTransform3D x:Name="scale_z2"></ScaleTransform3D>
+                                        </Transform3DGroup>
+                                    </ModelVisual3D.Transform>
+                                </ModelVisual3D>
+                            </Viewport3D>
+
+                            <Viewport3D x:Name="vp_h2" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <Viewport3D.Camera>
+                                    <PerspectiveCamera Position="0,0.3,3.5" LookDirection="0,0,-3.5"></PerspectiveCamera>
+                                </Viewport3D.Camera>
+                                <ModelVisual3D>
+                                    <ModelVisual3D.Content>
+                                        <DirectionalLight Color="White" Direction="-1,-1,-2" />
+                                    </ModelVisual3D.Content>
+                                </ModelVisual3D>
+                                <ModelVisual3D x:Name="g_horizontal_2">
+                                    <ModelVisual3D.Content>
+                                        <Model3DGroup x:Name="g_horizontal_2_group">
+                                        </Model3DGroup>
+
+                                    </ModelVisual3D.Content>
+                                    <ModelVisual3D.Transform>
+                                        <Transform3DGroup x:Name="g_horizontal_2_transform">
+                                            <TranslateTransform3D OffsetY="0.3"></TranslateTransform3D>
+                                            <RotateTransform3D>
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D x:Name="rotateY_h2" Axis="0 1 0" Angle="0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+
+                                            <RotateTransform3D>
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D x:Name="rotateX_h2" Axis="1 0 0" Angle="0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+                                            <ScaleTransform3D x:Name="scale_h2"></ScaleTransform3D>
+                                        </Transform3DGroup>
+                                    </ModelVisual3D.Transform>
+                                </ModelVisual3D>
+                            </Viewport3D>
+
+                            <Viewport3D x:Name="vp_v2" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <Viewport3D.Camera>
+                                    <PerspectiveCamera Position="0,0.3,3.5" LookDirection="0,0,-3.5"></PerspectiveCamera>
+                                </Viewport3D.Camera>
+                                <ModelVisual3D>
+                                    <ModelVisual3D.Content>
+                                        <DirectionalLight Color="White" Direction="-1,-1,-2" />
+                                    </ModelVisual3D.Content>
+                                </ModelVisual3D>
+                                <ModelVisual3D x:Name="g_vertical_2">
+                                    <ModelVisual3D.Content>
+                                        <Model3DGroup x:Name="g_vertical_2_group">
+                                        </Model3DGroup>
+
+                                    </ModelVisual3D.Content>
+                                    <ModelVisual3D.Transform>
+                                        <Transform3DGroup x:Name="g_vertical_2_transform">
+                                            <TranslateTransform3D OffsetY="0.3"></TranslateTransform3D>
+                                            <RotateTransform3D>
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D x:Name="rotateY_v2" Axis="0 1 0" Angle="0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+
+                                            <RotateTransform3D>
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D x:Name="rotateX_v2" Axis="1 0 0" Angle="0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+                                            <ScaleTransform3D x:Name="scale_v2"></ScaleTransform3D>
+                                        </Transform3DGroup>
+                                    </ModelVisual3D.Transform>
+                                </ModelVisual3D>
+                            </Viewport3D>
+
+                            <Viewport3D x:Name="vp_d2" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <Viewport3D.Camera>
+                                    <PerspectiveCamera Position="0,0.3,3.5" LookDirection="0,0,-3.5"></PerspectiveCamera>
+                                </Viewport3D.Camera>
+                                <ModelVisual3D>
+                                    <ModelVisual3D.Content>
+                                        <DirectionalLight Color="White" Direction="-1,-1,-2" />
+                                    </ModelVisual3D.Content>
+                                </ModelVisual3D>
+                                <ModelVisual3D x:Name="g_diagonal_2">
+                                    <ModelVisual3D.Content>
+                                        <Model3DGroup x:Name="g_diagonal_2_group">
+                                        </Model3DGroup>
+
+                                    </ModelVisual3D.Content>
+                                    <ModelVisual3D.Transform>
+                                        <Transform3DGroup x:Name="g_diagonal_2_transform">
+                                            <TranslateTransform3D OffsetY="0.3"></TranslateTransform3D>
+                                            <RotateTransform3D>
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D x:Name="rotateY_d2" Axis="0 1 0" Angle="0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+
+                                            <RotateTransform3D>
+                                                <RotateTransform3D.Rotation>
+                                                    <AxisAngleRotation3D x:Name="rotateX_d2" Axis="1 0 0" Angle="0"/>
+                                                </RotateTransform3D.Rotation>
+                                            </RotateTransform3D>
+                                            <ScaleTransform3D x:Name="scale_d2"></ScaleTransform3D>
+                                        </Transform3DGroup>
+                                    </ModelVisual3D.Transform>
+                                </ModelVisual3D>
+                            </Viewport3D>
+                        </Grid>
+                    </Grid>
+                    
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

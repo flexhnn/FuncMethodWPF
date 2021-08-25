@@ -1,0 +1,17 @@
+C:\Users\Yan\source\repos\FM2WPF\FM2WPF\bin\Debug\FM2WPF.exe.config
+C:\Users\Yan\source\repos\FM2WPF\FM2WPF\bin\Debug\FM2WPF.exe
+C:\Users\Yan\source\repos\FM2WPF\FM2WPF\bin\Debug\FM2WPF.pdb
+C:\Users\Yan\source\repos\FM2WPF\FM2WPF\obj\Debug\MainWindow.g.cs
+C:\Users\Yan\source\repos\FM2WPF\FM2WPF\obj\Debug\App.g.cs
+C:\Users\Yan\source\repos\FM2WPF\FM2WPF\obj\Debug\FM2WPF_MarkupCompile.cache
+C:\Users\Yan\source\repos\FM2WPF\FM2WPF\obj\Debug\FM2WPF_MarkupCompile.lref
+C:\Users\Yan\source\repos\FM2WPF\FM2WPF\obj\Debug\MainWindow.baml
+C:\Users\Yan\source\repos\FM2WPF\FM2WPF\obj\Debug\FM2WPF.g.resources
+C:\Users\Yan\source\repos\FM2WPF\FM2WPF\obj\Debug\FM2WPF.Properties.Resources.resources
+C:\Users\Yan\source\repos\FM2WPF\FM2WPF\obj\Debug\FM2WPF.csproj.GenerateResource.cache
+C:\Users\Yan\source\repos\FM2WPF\FM2WPF\obj\Debug\FM2WPF.csproj.CoreCompileInputs.cache
+C:\Users\Yan\source\repos\FM2WPF\FM2WPF\obj\Debug\FM2WPF.exe
+C:\Users\Yan\source\repos\FM2WPF\FM2WPF\obj\Debug\FM2WPF.pdb
+C:\Users\Yan\source\repos\FM2WPF\FM2WPF\obj\Debug\Charts.g.cs
+C:\Users\Yan\source\repos\FM2WPF\FM2WPF\obj\Debug\Charts.baml
+C:\Users\Yan\source\repos\FM2WPF\FM2WPF\obj\Debug\FM2WPF.csprojAssemblyReference.cache
